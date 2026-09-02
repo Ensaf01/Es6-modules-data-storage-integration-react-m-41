@@ -1,9 +1,16 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Watch from './components/Watch/Watch';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [watchData, setWatchData] = useState([])
+
+  useEffect(() => {
+    fetch('watches.json')
+      .then(res => res.json())
+      .then(data => setWatchData(data))
+  }, [])
+
   // create fake data for sunglass and watch
   // const watchData = [
   //   {id:1, name:'Rolex', price: 5000},
