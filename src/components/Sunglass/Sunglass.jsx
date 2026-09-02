@@ -1,6 +1,6 @@
 import React from 'react';
 import'./Sunglass.css'
-import Watch from '../watch/watch';
+import Watch from '../Watch/Watch';
 import  { add,multiply,dividedByNumberTwo as divided }  from '../../Utils/calculate';
 
 const Sunglass = () => {
